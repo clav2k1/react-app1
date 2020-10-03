@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
 
-function HellWorld() {
+function HellWorld(props) {
+  console.log(props);
+  
   return (
-    <div id="hello">Hello World!!!</div>
+  <div id="hello">
+    <h3>{props.head}</h3>
+    Hello {props.txt}
+  </div>
   );
 }
 
@@ -22,7 +27,12 @@ function HellWorld() {
 // llamado del componente como funcion
 function App() {
   return (
-    <div>Este es mi componente: <HellWorld/> con Funcion</div>
+    <div>
+      Este es mi componente: 
+      <HellWorld txt="clav2k1" head="Component 1"/> 
+      <HellWorld txt="Clau" head="Component 2"/> 
+      <HellWorld txt="Javi"/> con Funcion
+    </div>
   );
 }
 

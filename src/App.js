@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+function HellWorld() {
+  return (
+    <div id="hello">Hello World!!!</div>
+  );
+}
+
+// llamado del componente como funcion =>
+// const App = () => <div>Este es mi componente: <HellWorld/> con Flecha</div>
+
+
+// // llamdo del componente como clase
+// class App extends React.Component {
+//   render() {
+//     return <div>Este es mi componente: <HellWorld/> con Clase</div>
+//   }
+// }
+
+
+// llamado del componente como funcion
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>Este es mi componente: <HellWorld/> con Funcion</div>
   );
 }
 

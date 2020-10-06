@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './task.css';
+
 
 
 class Task extends Component {
@@ -23,16 +25,7 @@ class Task extends Component {
 
         const {task} = this.props;
         
-        const styleBtnDelete = {
-            fontSize: '18px',
-            color: '#fff',
-            background: 'red',
-            border: 'none',
-            padding: '10px 15px',
-            borderRadius: '50%',
-            cursor: 'pointer'
-        };
-
+        
         return <div style={this.styleTaskCompleted()}>
             {task.title} - 
             {task.description} - 
@@ -43,5 +36,20 @@ class Task extends Component {
         </div>
     }
 }
+
+
+Task.propTypes = {
+    task: PropTypes.object.isRequired
+};
+
+const styleBtnDelete = {
+    fontSize: '18px',
+    color: '#fff',
+    background: 'red',
+    border: 'none',
+    padding: '10px 15px',
+    borderRadius: '50%',
+    cursor: 'pointer'
+};
 
 export default Task;

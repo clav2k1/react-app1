@@ -15,6 +15,6 @@
         "id": 2,
         "title": "Tarea Tres",
         "description": "tarea 3",
-        "done": false
+        "done": true
     }
 ]

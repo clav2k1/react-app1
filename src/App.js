@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
+
+//data
 import tasks from './data/task.json';
+
+//components
 import Tasks from './components/tasks';
+import TaskForm from './components/taskForm';
+
+
 // console.log(tasks);
 
 class App extends Component {
@@ -13,6 +20,7 @@ class App extends Component {
     // return <h1>Hola Mundo</h1>
     return <div>
       {/* {this.state.tasks.map(e => <h1 key={e.id}>{e.title}</h1>)} */}
+      <TaskForm />
       <Tasks tasks={this.state.tasks}/>
     </div>
   }

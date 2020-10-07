@@ -7,6 +7,7 @@ import tasks from './data/task.json';
 //components
 import Tasks from './components/tasks';
 import TaskForm from './components/taskForm';
+import Posts from './components/Posts';
 
 
 // console.log(tasks);
@@ -61,7 +62,15 @@ class App extends Component {
     return <div>
       {/* {this.state.tasks.map(e => <h1 key={e.id}>{e.title}</h1>)} */}
       <TaskForm addTask={this.addTask} />
-      <Tasks tasks={this.state.tasks} delTask={this.delTask} chkDone={this.checkDone}/>
+
+      <Tasks
+        tasks={this.state.tasks}
+        delTask={this.delTask}
+        chkDone={this.checkDone}
+      />
+
+      <Posts />
+
     </div>
   }
 }
